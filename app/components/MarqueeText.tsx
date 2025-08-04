@@ -14,7 +14,7 @@ const MarqueeText = () => {
   return (
     <div className="w-full font-sans overflow-hidden">
       <LinearLoop
-        marqueeText="Let’s connect and create something meaningful."
+        marqueeText="CONTACT ME"
         speed={1}
         direction="left"
         interactive={true}
