@@ -1,5 +1,5 @@
 export const about = [
-  { text: "Mid Frontend Developer", highlight: true },
+  { text: "Frontend Developer", highlight: true },
   { text: " with a passion for ", highlight: false },
   { text: "clean code,", highlight: true },
   {

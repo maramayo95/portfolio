@@ -24,7 +24,6 @@ export const SlideInText = ({
 
   let charIndex = 0;
 
-  console.log(centered)
   return (
     <h2
       ref={ref}

@@ -5,14 +5,21 @@ import About2 from "./components/About2";
 import ContactForm from "./components/ContactForm";
 import MarqueeText from "./components/MarqueeText";
 
-
 export default function Home() {
   return (
-    <main >
-      <Hero/>
-      <About/>
-      <About2/>
-      <ContactForm/>
+    <main id="home">
+      <Hero />
+      <div id="about">
+        <About />
+      </div>
+
+      <div id="projects">
+        <About2 />
+      </div>
+
+      <div id="contact">
+        <ContactForm />
+      </div>
     </main>
   );
 }

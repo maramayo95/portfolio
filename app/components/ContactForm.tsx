@@ -25,11 +25,8 @@ export default function ContactForm() {
   };
 
   return (
-    
-
     <BackgroundBottom>
-   
-<MarqueeText/>
+      <MarqueeText />
       <div className="w-full min-h-screen flex items-center justify-center px-4 py-12 ">
         <div className="w-full max-w-xl bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md border border-zinc-300 dark:border-zinc-700 rounded-2xl shadow-lg p-8 space-y-6">
           {/* Header */}
@@ -50,7 +47,7 @@ export default function ContactForm() {
                 />
               </svg>
             </div>
-            <h2 className="text-2xl font-semibold text-zinc-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-semibold text-zinc-900 dark:text-white text-center">
               Contact Me
             </h2>
             <p className="text-sm text-zinc-600 dark:text-zinc-400">
@@ -125,7 +122,5 @@ export default function ContactForm() {
         </div>
       </div>
     </BackgroundBottom>
-
-   
   );
 }

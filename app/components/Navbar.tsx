@@ -1,7 +1,11 @@
-'use client'
-import React from 'react';
-import { motion, Variants } from 'framer-motion';
-import { Home, Settings, Bell, User } from 'lucide-react';
+"use client";
+import React, { useState } from "react";
+import { Variants } from "framer-motion";
+import { Home, Settings, Bell, User } from "lucide-react";
+import { Button } from "./Drawer";
+import MenuMobile from "./MenuMobile";
+import Menu3D from "./Menu3d";
+import { Menu, X } from "lucide-react";
 
 // --- MenuBar Component ---
 
@@ -18,28 +22,32 @@ const menuItems: MenuItem[] = [
     icon: <Home className="h-5 w-5" />,
     label: "Home",
     href: "#",
-    gradient: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
+    gradient:
+      "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
     iconColor: "group-hover:text-blue-500 dark:group-hover:text-blue-400",
   },
   {
     icon: <Bell className="h-5 w-5" />,
     label: "Notifications",
     href: "#",
-    gradient: "radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(234,88,12,0.06) 50%, rgba(194,65,12,0) 100%)",
+    gradient:
+      "radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(234,88,12,0.06) 50%, rgba(194,65,12,0) 100%)",
     iconColor: "group-hover:text-orange-500 dark:group-hover:text-orange-400",
   },
   {
     icon: <Settings className="h-5 w-5" />,
     label: "Settings",
     href: "#",
-    gradient: "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
+    gradient:
+      "radial-gradient(circle, rgba(34,197,94,0.15) 0%, rgba(22,163,74,0.06) 50%, rgba(21,128,61,0) 100%)",
     iconColor: "group-hover:text-green-500 dark:group-hover:text-green-400",
   },
   {
     icon: <User className="h-5 w-5" />,
     label: "Profile",
     href: "#",
-    gradient: "radial-gradient(circle, rgba(239,68,68,0.15) 0%, rgba(220,38,38,0.06) 50%, rgba(185,28,28,0) 100%)",
+    gradient:
+      "radial-gradient(circle, rgba(239,68,68,0.15) 0%, rgba(220,38,38,0.06) 50%, rgba(185,28,28,0) 100%)",
     iconColor: "group-hover:text-red-500 dark:group-hover:text-red-400",
   },
 ];
@@ -86,75 +94,30 @@ const sharedTransition = {
 };
 
 function Navbar(): React.JSX.Element {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = (open: boolean) => {
+    setIsOpen(open);
+  };
+
   return (
-    <motion.nav
-      className="p-2 rounded-2xl bg-white/60 dark:bg-black/60 backdrop-blur-lg border border-gray-200/80 dark:border-gray-800/80 shadow-lg dark:shadow-gray-900/20 relative overflow-hidden"
-      initial="initial"
-      whileHover="hover"
-    >
-      <motion.div
-        className="absolute -inset-2 rounded-3xl z-0 pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(59,130,246,0.1) 0%, rgba(147,51,234,0.1) 50%, rgba(239,68,68,0.1) 100%)"
-        }}
-        variants={navGlowVariants}
-      />
-      <ul className="flex items-center gap-2 relative z-10">
-        {menuItems.map((item: MenuItem) => (
-          <motion.li key={item.label} className="relative">
-            <motion.div
-              className="block rounded-xl overflow-visible group relative"
-              style={{ perspective: "600px" }}
-              whileHover="hover"
-              initial="initial"
-            >
-              {/* Glow effect on hover */}
-              <motion.div
-                className="absolute inset-0 z-0 pointer-events-none rounded-2xl"
-                variants={glowVariants}
-                style={{
-                  background: item.gradient,
-                  opacity: 0,
-                }}
-              />
-              {/* Front-facing menu item */}
-              <motion.a
-                href={item.href}
-                className="flex items-center gap-2 px-4 py-2 relative z-10 bg-transparent text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors rounded-xl"
-                variants={itemVariants}
-                transition={sharedTransition}
-                style={{
-                  transformStyle: "preserve-3d",
-                  transformOrigin: "center bottom"
-                }}
-              >
-                <span className={`transition-colors duration-300 ${item.iconColor}`}>
-                  {item.icon}
-                </span>
-                <span className="font-medium">{item.label}</span>
-              </motion.a>
-              {/* Back-facing menu item for the 3D flip effect */}
-              <motion.a
-                href={item.href}
-                className="flex items-center gap-2 px-4 py-2 absolute inset-0 z-10 bg-transparent text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors rounded-xl"
-                variants={backVariants}
-                transition={sharedTransition}
-                style={{
-                  transformStyle: "preserve-3d",
-                  transformOrigin: "center top",
-                  transform: "rotateX(90deg)"
-                }}
-              >
-                <span className={`transition-colors duration-300 ${item.iconColor}`}>
-                  {item.icon}
-                </span>
-                <span className="font-medium">{item.label}</span>
-              </motion.a>
-            </motion.div>
-          </motion.li>
-        ))}
-      </ul>
-    </motion.nav>
+    <>
+      <div className="w-full flex justify-end px-6  block sm:hidden ">
+        <div className=" bg-[#000] ">
+          <Button variant="outline" onClick={() => handleOpen(!isOpen)}>
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </Button>
+        </div>
+      </div>
+
+      <div className="hidden lg:block">
+        <Menu3D />
+      </div>
+
+      <div className="block sm:hidden">
+        <MenuMobile isOpen={isOpen} handleOpen={() => handleOpen(!isOpen)} />
+      </div>
+    </>
   );
 }
 
