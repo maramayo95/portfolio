@@ -2,6 +2,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Link from "next/link";
+import DownloadCV from "./DownloadCv";
 
 // Self-contained SVG icon for the "Welcome" badge
 const DotIcon = () => (
@@ -222,16 +223,19 @@ const Hero = () => {
             </div>
 
             <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg lg:text-xl max-w-lg leading-relaxed">
-             React Developer ⚛️ | Building bold, interactive UIs ⚡ | Product-focused coder 🚀
+              React Developer ⚛️ | Building bold, interactive UIs ⚡ |
+              Product-focused coder 🚀
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 w-full sm:w-auto">
-              <Link href="/#contact" className=" text-center px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95">
+              <Link
+                href="/#contact"
+                className=" text-center px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+              >
                 Contact
               </Link>
-              <button className="px-6 py-3 bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-lg font-semibold transition-all duration-300 hover:scale-105 active:scale-95">
-                Get Resume
-              </button>
+
+              <DownloadCV />
             </div>
           </div>
 

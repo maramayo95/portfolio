@@ -27,7 +27,7 @@ export const SlideInText = ({
   return (
     <h2
       ref={ref}
-      className={`${textSize} font-light flex flex-wrap gap-x-1 leading-relaxed ${
+      className={`${textSize}  mt-10 font-light flex flex-wrap gap-x-1 leading-relaxed ${
         centered ? "justify-center" : "justify-start lg:justify-start"
       } items-center`}
     >

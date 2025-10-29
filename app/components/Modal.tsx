@@ -58,14 +58,28 @@ const Modal: React.FC<ModalProps> = ({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(147,51,234,0.15) 50%, rgba(239,68,68,0.1) 100%)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            border: "1px solid rgba(255,255,255,0.15)",
+            boxShadow: "0 4px 30px rgba(0,0,0,0.2)",
+          }}
+          className="fixed inset-0 z-80 flex items-center justify-center bg-black/50 backdrop-blur-sm "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
           <motion.div
-            className={`bg-white dark:bg-gray-900 rounded-xl shadow-xl p-6 w-full ${sizeClasses[size]} relative`}
+            className={`relative w-full ${sizeClasses[size]} rounded-2xl p-6 
+    bg-[black]/80 dark:bg-black/60 
+    backdrop-blur-xl 
+    border border-white/20 
+    shadow-2xl 
+    text-gray-900 dark:text-gray-100
+    `}
             onClick={(e) => e.stopPropagation()}
             initial={variant.initial}
             animate={variant.animate}
