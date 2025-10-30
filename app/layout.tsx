@@ -15,9 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Matias Aramayo",
-  description: "Portfolio",
+  title: "Matias Aramayo | Frontend Developer",
+  description:
+    "Frontend developer passionate about clean code, performance, and impactful digital experiences. Skilled in React, Tailwind CSS, and Node.js, focused on building scalable and modern web applications. Currently pursuing a Bachelor's degree in Systems at CAECE University.",
 };
+
 
 export default function RootLayout({
   children,
