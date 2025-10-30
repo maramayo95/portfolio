@@ -1,7 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { SparkleIcon, FigmaIcon, CoralIcon, PalmTreeIcon, FlowerIcon, PerplexityIcon, HashIcon } from "./Icons"; 
+import {
+  Sparkles,
+  Building2,
+  Brain,
+  Leaf,
+  Image as ImageIcon,
+  Bot,
+  FolderKanban,
+  Truck,
+} from "lucide-react";
 
 import ModalProject from "./ModalProject";
 import { IconWrapper } from "./Stack";
@@ -9,49 +18,54 @@ import { IconWrapper } from "./Stack";
 const IconGridWithModal: React.FC = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [activeIcon, setActiveIcon] = useState<number | null>(null);
-
   const outerIcons = [
     {
       id: 1,
-      component: <SparkleIcon />,
-      title: "Creative Design",
-      text: "Sparkle represents innovation and creativity applied in design projects.",
-      image: "https://images.unsplash.com/photo-1503264116251-35a269479413",
+      component: <Sparkles />,
+      title: "Hav",
+      text: "Creative studio delivering cutting-edge visual production and digital experiences led by Lautaro Hachelias.",
+      image: "/hav.png",
+      url: "https://www.hav.com.ar/",
     },
     {
       id: 2,
-      component: <FigmaIcon />,
-      title: "UI/UX Design",
-      text: "Built with Figma, ensuring consistent and high-quality user experiences.",
-      image: "https://images.unsplash.com/photo-1503264116251-35a269479413",
+      component: <Building2 />,
+      title: "Terra",
+      text: "Architecture firm specializing in sustainable, bioclimatic, and passive house design that harmonizes innovation with environmental responsibility.",
+      image: "/terra.png",
+      url: "https://estudio-terra.vercel.app/",
     },
     {
       id: 3,
-      component: <CoralIcon />,
-      title: "Color Systems",
-      text: "Coral palettes bring warm tones and visual harmony to your brand identity.",
-      image: "https://images.unsplash.com/photo-1503264116251-35a269479413",
+      component: <Brain />,
+      title: "Contigo Crece",
+      text: "Platform offering professional courses and psychological services designed to foster personal growth and emotional well-being.",
+      image: "/contigo_crece.png",
+      url: "https://contigo-crece.vercel.app/",
     },
     {
       id: 4,
-      component: <PalmTreeIcon />,
-      title: "Sustainability",
-      text: "We focus on sustainable design and eco-friendly digital strategies.",
-      image: "https://images.unsplash.com/photo-1503264116251-35a269479413",
+      component: <Truck />,
+      title: "Camiones Ruta Sur",
+      text: "Logistics company specialized in freight transport and distribution, providing reliable and efficient solutions across Argentina’s southern routes.",
+      image: "/camiones.png",
+      url: "https://camiones-ruta-sur.vercel.app/",
     },
     {
       id: 5,
-      component: <FlowerIcon />,
+      component: <ImageIcon />,
       title: "Visual Storytelling",
-      text: "Transform ideas into meaningful visuals with creative storytelling.",
-      image: "https://images.unsplash.com/photo-1503264116251-35a269479413",
+      text: "Turning concepts into powerful narratives through impactful and aesthetic visual communication.",
+      image: "/clinica.png",
+      url: "",
     },
     {
       id: 6,
-      component: <PerplexityIcon />,
+      component: <Bot />,
       title: "AI Integration",
       text: "Harnessing AI to automate and personalize the user experience.",
       image: "https://images.unsplash.com/photo-1503264116251-35a269479413",
+      url: "#",
     },
   ];
 
@@ -79,10 +93,16 @@ const IconGridWithModal: React.FC = () => {
             {outerIcons.map((icon, i) => {
               const angleInDegrees = -150 + i * 60;
               const angleInRadians = angleInDegrees * (Math.PI / 180);
-              const startX = svgCenter + centralIconRadius * Math.cos(angleInRadians);
-              const startY = svgCenter + centralIconRadius * Math.sin(angleInRadians);
-              const endX = svgCenter + (radius - outerIconRadius) * Math.cos(angleInRadians);
-              const endY = svgCenter + (radius - outerIconRadius) * Math.sin(angleInRadians);
+              const startX =
+                svgCenter + centralIconRadius * Math.cos(angleInRadians);
+              const startY =
+                svgCenter + centralIconRadius * Math.sin(angleInRadians);
+              const endX =
+                svgCenter +
+                (radius - outerIconRadius) * Math.cos(angleInRadians);
+              const endY =
+                svgCenter +
+                (radius - outerIconRadius) * Math.sin(angleInRadians);
               return (
                 <line
                   key={`line-${icon.id}`}
@@ -104,8 +124,12 @@ const IconGridWithModal: React.FC = () => {
         <div className="absolute top-1/2 left-1/2">
           {/* Center Icon */}
           <div className="absolute -translate-x-1/2 -translate-y-1/2 z-10">
-            <IconWrapper className="w-24 h-24" isHighlighted={true} animationDelay={0}>
-              <HashIcon />
+            <IconWrapper
+              className="w-24 h-24"
+              isHighlighted={true}
+              animationDelay={0}
+            >
+              <FolderKanban />
             </IconWrapper>
           </div>
 
@@ -152,6 +176,7 @@ const IconGridWithModal: React.FC = () => {
               title={icon.title}
               text={icon.text}
               imageSrc={icon.image}
+              linkTo={icon.url}
             />
           )
       )}
