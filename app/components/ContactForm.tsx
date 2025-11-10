@@ -27,8 +27,8 @@ export default function ContactForm() {
   return (
     <BackgroundBottom>
       <MarqueeText />
-      <div className="w-full min-h-screen flex items-center justify-center px-4 py-12 ">
-        <div className="w-full max-w-xl bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md border border-zinc-300 dark:border-zinc-700 rounded-2xl shadow-lg p-8 space-y-6">
+      <div className="w-full min-h-screen flex items-center justify-center px-4 py-12  ">
+        <div className="w-full max-w-xl bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md border border-zinc-300 dark:border-zinc-700 rounded-2xl shadow-lg p-8 space-y-6  bg-gradient-to-r from-zinc-100 to-zinc-200 dark:from-[#000000] dark:to-[#0a0d37] border-zinc-300 dark:border-[#1b2c68a0]">
           {/* Header */}
           <div className="text-center space-y-2">
             <div className="inline-flex items-center justify-center p-2 rounded-md bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700">
@@ -114,7 +114,7 @@ export default function ContactForm() {
 
             <button
               type="submit"
-              className="w-full h-10 bg-zinc-900 dark:bg-zinc-50 text-zinc-50 dark:text-zinc-900 rounded-md font-medium hover:bg-zinc-800 dark:hover:bg-zinc-100 transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-800 dark:focus:ring-zinc-300"
+              className=" w-full text-center px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
             >
               Send Message
             </button>

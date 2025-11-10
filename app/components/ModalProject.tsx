@@ -14,7 +14,7 @@ interface ModalProjectProps {
   imageSrc?: string;
   imageAlt?: string;
   children?: React.ReactNode;
-  linkTo?:string;
+  linkTo?: string;
 }
 
 const ModalProject: React.FC<ModalProjectProps> = ({
@@ -25,7 +25,7 @@ const ModalProject: React.FC<ModalProjectProps> = ({
   imageSrc,
   imageAlt = "Modal Image",
   children,
-  linkTo
+  linkTo,
 }) => {
   return (
     <Modal
@@ -35,7 +35,7 @@ const ModalProject: React.FC<ModalProjectProps> = ({
       animation="fade"
       size="md"
     >
-      <Link href={linkTo  || ""} target="_blank">
+      <Link href={linkTo || ""} target="_blank">
         <div className="space-y-4">
           {/* Imagen opcional */}
           {imageSrc && (

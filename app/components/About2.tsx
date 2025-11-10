@@ -4,6 +4,7 @@ import Container from "./Container";
 import Stack from "./Stack";
 import { SlideInText } from "./SliderText";
 import { projects } from "../constants";
+import { AppearText } from "./AppearText";
 
 
 const About2 = () => {
@@ -19,7 +20,8 @@ const About2 = () => {
         <div className=" w-full lg:w-1/2">
           <SlideInText  segments={[  { text: "Projects", highlight: true }]}/>
 
-         <SlideInText textSize="text-xl"  segments={projects} />
+         {/* <SlideInText textSize="text-xl"  segments={projects} /> */}
+         <AppearText/>
         </div>
 
       <div className=" w-full lg:w-1/2">
