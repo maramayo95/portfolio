@@ -63,11 +63,11 @@ const ModalProject: React.FC<ModalProjectProps> = ({
           {children}
 
           {/* Botón de cierre */}
-          <div className="flex justify-end">
+          {/* <div className="flex justify-end">
             <Button onClick={onClose} variant="outline">
               Close
             </Button>
-          </div>
+          </div> */}
         </div>
       </Link>
     </Modal>
