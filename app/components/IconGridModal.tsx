@@ -2,15 +2,15 @@
 
 import React, { useState } from "react";
 import {
-  Sparkles,
   Building2,
   Brain,
-  Leaf,
-  Image as ImageIcon,
-  Bot,
+  
   FolderKanban,
   Truck,
+  Cross,
+  Clapperboard
 } from "lucide-react";
+
 
 import ModalProject from "./ModalProject";
 import { IconWrapper } from "./Stack";
@@ -21,7 +21,7 @@ const IconGridWithModal: React.FC = () => {
   const outerIcons = [
     {
       id: 1,
-      component: <Sparkles />,
+      component:<Clapperboard />,
       title: "Hav",
       text: "Creative studio delivering cutting-edge visual production and digital experiences led by Lautaro Hachelias.",
       image: "/hav.png",
@@ -53,20 +53,20 @@ const IconGridWithModal: React.FC = () => {
     },
     {
       id: 5,
-      component: <ImageIcon />,
+      component: <Cross />,
       title: "Visual Storytelling",
       text: "Turning concepts into powerful narratives through impactful and aesthetic visual communication.",
       image: "/clinica.png",
-      url: "",
+      url: "https://clinic-flow-scheduler.vercel.app/",
     },
-    {
-      id: 6,
-      component: <Bot />,
-      title: "AI Integration",
-      text: "Harnessing AI to automate and personalize the user experience.",
-      image: "https://images.unsplash.com/photo-1503264116251-35a269479413",
-      url: "#",
-    },
+    // {
+    //   id: 6,
+    //   component: <Bot />,
+    //   title: "AI Integration",
+    //   text: "Harnessing AI to automate and personalize the user experience.",
+    //   image: "https://images.unsplash.com/photo-1503264116251-35a269479413",
+    //   url: "#",
+    // },
   ];
 
   const radius = 160;
