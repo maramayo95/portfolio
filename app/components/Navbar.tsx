@@ -24,7 +24,7 @@ const menuItems: MenuItem[] = [
     href: "#",
     gradient:
       "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(37,99,235,0.06) 50%, rgba(29,78,216,0) 100%)",
-    iconColor: "group-hover:text-blue-500 dark:group-hover:text-blue-400",
+    iconColor: "group-hover:text-blue-400",
   },
   {
     icon: <Bell className="h-5 w-5" />,

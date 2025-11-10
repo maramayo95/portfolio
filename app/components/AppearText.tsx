@@ -10,31 +10,31 @@ export const AppearText = () => {
       className="text-xl md:text-2xl font-light leading-relaxed text-white mt-10"
     >
       Each project I’ve worked on tells a story of
-      <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
         challenges faced
       </span>
       , solutions crafted, and{" "}
-      <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
         lessons learned
       </span>
       . Whether leading{" "}
-      <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
         frontend efforts
       </span>
       , diving deep into{" "}
-      <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
         API integration
       </span>
       , or optimizing for{" "}
-      <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
         performance
       </span>
       , I approach every task with{" "}
-      <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
         focus
       </span>{" "}
       and{" "}
-      <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+      <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
         curiosity
       </span>
       . Here are some highlights from my journey so far:
