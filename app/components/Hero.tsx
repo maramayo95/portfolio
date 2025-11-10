@@ -12,7 +12,7 @@ const DotIcon = () => (
 const coderData = {
   name: "Matias Aramayo",
   role: "Frontend Developer",
-  seniority: "Mid-Level",
+  // seniority: "Semi sr.",
   location: "Argentina",
   skills: [
     "React",
@@ -21,10 +21,9 @@ const coderData = {
     "TypeScript",
     "TailwindCSS",
     "CSS",
-    "Figma",
+    "Material Ui",
     "GitHub",
     "HTML",
-    "Astro",
     "Node.js",
     "Express",
     "MongoDB",
@@ -82,12 +81,12 @@ const CoderProfileCard = () => {
               <span className="text-green-400">{coderData.role}</span>
               <span className="text-gray-400">&#39;,</span>
             </div>
-            <div className="pl-6">
+            {/* <div className="pl-6">
               <span className="text-white">seniority:</span>
               <span className="text-gray-400">&#39;</span>
               <span className="text-green-400">{coderData.seniority}</span>
               <span className="text-gray-400">&#39;,</span>
-            </div>
+            </div> */}
             <div className="pl-6">
               <span className="text-white">location:</span>
               <span className="text-gray-400">&#39;</span>
