@@ -65,7 +65,7 @@ const MenuMobile: React.FC<MenuMobileProps> = ({ isOpen, handleOpen }) => {
             <a
               key={item.label}
               href={item.href}
-              className="flex items-center gap-3 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+              className="flex items-center gap-3 text-gray-200 hover:text-blue-400 transition-colors"
             >
               {item.icon}
               <span className="text-lg font-medium">{item.label}</span>
@@ -84,7 +84,7 @@ const MenuMobile: React.FC<MenuMobileProps> = ({ isOpen, handleOpen }) => {
               unoptimized
               priority
             />
-            <span className="text-gray-900 dark:text-white text-lg tracking-wide">
+            <span className=" text-white text-lg tracking-wide">
               Matias Aramayo
             </span>
           </div>

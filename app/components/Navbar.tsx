@@ -105,7 +105,7 @@ function Navbar(): React.JSX.Element {
       <div className="w-full flex justify-end px-6  block sm:hidden ">
         <div className=" bg-[#000] ">
           <Button variant="outline" onClick={() => handleOpen(!isOpen)}>
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5 text-gray-300" />}
           </Button>
         </div>
       </div>

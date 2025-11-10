@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-
 import BackgroundBottom from "./BackgroundBottom";
 import MarqueeText from "./MarqueeText";
 
@@ -27,14 +26,14 @@ export default function ContactForm() {
   return (
     <BackgroundBottom>
       <MarqueeText />
-      <div className="w-full min-h-screen flex items-center justify-center px-4 py-12  ">
-        <div className="w-full max-w-xl bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md border border-zinc-300 dark:border-zinc-700 rounded-2xl shadow-lg p-8 space-y-6  bg-gradient-to-r from-zinc-100 to-zinc-200 dark:from-[#000000] dark:to-[#0a0d37] border-zinc-300 dark:border-[#1b2c68a0]">
+      <div className="w-full min-h-screen flex items-center justify-center px-4 py-12">
+        <div className="w-full max-w-xl bg-zinc-900/70 backdrop-blur-md border border-[#1b2c68a0] rounded-2xl shadow-lg p-8 space-y-6 bg-gradient-to-r from-[#000000] to-[#0a0d37]">
           {/* Header */}
           <div className="text-center space-y-2">
-            <div className="inline-flex items-center justify-center p-2 rounded-md bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700">
+            <div className="inline-flex items-center justify-center p-2 rounded-md bg-zinc-800 border border-zinc-700">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-zinc-700 dark:text-zinc-300"
+                className="h-5 w-5 text-zinc-300"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -47,10 +46,10 @@ export default function ContactForm() {
                 />
               </svg>
             </div>
-            <h2 className="text-3xl md:text-4xl font-semibold text-zinc-900 dark:text-white text-center">
+            <h2 className="text-3xl md:text-4xl font-semibold text-white text-center">
               Contact Me
             </h2>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm text-zinc-400">
               Got a project or idea? Let's talk.
             </p>
           </div>
@@ -80,7 +79,7 @@ export default function ContactForm() {
               <div key={id} className="space-y-1">
                 <label
                   htmlFor={id}
-                  className="text-sm font-medium text-zinc-900 dark:text-zinc-200"
+                  className="text-sm font-medium text-zinc-200"
                 >
                   {label}
                 </label>
@@ -90,7 +89,7 @@ export default function ContactForm() {
                   value={formData[id as keyof typeof formData]}
                   onChange={handleChange}
                   placeholder={placeholder}
-                  className="w-full h-10 px-3 rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-950 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-500 dark:placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-800 dark:focus:ring-zinc-300"
+                  className="w-full h-10 px-3 rounded-md border border-zinc-700 bg-zinc-950 text-sm text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-300"
                 />
               </div>
             ))}
@@ -98,7 +97,7 @@ export default function ContactForm() {
             <div className="space-y-1">
               <label
                 htmlFor="message"
-                className="text-sm font-medium text-zinc-900 dark:text-zinc-200"
+                className="text-sm font-medium text-zinc-200"
               >
                 Message
               </label>
@@ -108,13 +107,13 @@ export default function ContactForm() {
                 onChange={handleChange}
                 placeholder="Tell me more..."
                 rows={4}
-                className="w-full px-3 py-2 rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-950 text-sm text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-500 dark:placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-800 dark:focus:ring-zinc-300"
+                className="w-full px-3 py-2 rounded-md border border-zinc-700 bg-zinc-950 text-sm text-zinc-100 placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-300"
               />
             </div>
 
             <button
               type="submit"
-              className=" w-full text-center px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+              className="w-full text-center px-6 py-3 bg-blue-500 text-white hover:bg-blue-600 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
             >
               Send Message
             </button>
