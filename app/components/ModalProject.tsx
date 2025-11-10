@@ -54,7 +54,7 @@ const ModalProject: React.FC<ModalProjectProps> = ({
 
           {/* Texto opcional */}
           {text && (
-            <p className="text-gray-700 dark:text-gray-300 text-center">
+            <p className="text-gray-300 text-center">
               {text}
             </p>
           )}
