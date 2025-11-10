@@ -55,7 +55,7 @@ const IconGridWithModal: React.FC = () => {
       component: <Cross />,
       title: "Clinic Flow",
       text: "Landing page for a medical appointment system that allows patients to easily book, manage, and check their appointments.",
-      image: "/clinica.png",
+      image: "/clinic-flow.jpg",
       url: "https://clinic-flow-scheduler.vercel.app/",
     },
     {
