@@ -79,7 +79,7 @@ const Modal: React.FC<ModalProps> = ({
     backdrop-blur-xl 
     border border-white/20 
     shadow-2xl 
-    text-gray-900 dark:text-gray-100
+    text-gray-100
     `}
               onClick={(e) => e.stopPropagation()}
               initial={variant.initial}
@@ -87,7 +87,7 @@ const Modal: React.FC<ModalProps> = ({
               exit={variant.exit}
             >
               {title && (
-                <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">
+                <h3 className="text-lg font-semibold mb-4 text-gray-100">
                   {title}
                 </h3>
               )}
