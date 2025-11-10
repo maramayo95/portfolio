@@ -4,13 +4,12 @@ import React, { useState } from "react";
 import {
   Building2,
   Brain,
-  
   FolderKanban,
   Truck,
   Cross,
-  Clapperboard
+  Clapperboard,
+  Leaf,
 } from "lucide-react";
-
 
 import ModalProject from "./ModalProject";
 import { IconWrapper } from "./Stack";
@@ -21,7 +20,7 @@ const IconGridWithModal: React.FC = () => {
   const outerIcons = [
     {
       id: 1,
-      component:<Clapperboard />,
+      component: <Clapperboard />,
       title: "Hav",
       text: "Creative studio delivering cutting-edge visual production and digital experiences led by Lautaro Hachelias.",
       image: "/hav.png",
@@ -54,19 +53,19 @@ const IconGridWithModal: React.FC = () => {
     {
       id: 5,
       component: <Cross />,
-      title: "Visual Storytelling",
-      text: "Turning concepts into powerful narratives through impactful and aesthetic visual communication.",
+      title: "Clinic Flow",
+      text: "Landing page for a medical appointment system that allows patients to easily book, manage, and check their appointments.",
       image: "/clinica.png",
       url: "https://clinic-flow-scheduler.vercel.app/",
     },
-    // {
-    //   id: 6,
-    //   component: <Bot />,
-    //   title: "AI Integration",
-    //   text: "Harnessing AI to automate and personalize the user experience.",
-    //   image: "https://images.unsplash.com/photo-1503264116251-35a269479413",
-    //   url: "#",
-    // },
+    {
+      id: 6,
+      component: <Leaf />,
+      title: "Coaching Landing Page",
+      text: "A professional landing page showcasing coaching services and personal development guidance.",
+      image: "/liliana-landing.jpg",
+      url: "https://lilianavacatello.vercel.app/",
+    },
   ];
 
   const radius = 160;
